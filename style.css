@@ -1,0 +1,104 @@
+:root {
+    --doc-height: 100%;
+}
+   
+html, body {
+    height: 100vh; /* fallback for Js load */
+    height: var(--doc-height);
+    color: white;
+    background: rgb(36,0,0);
+    background: linear-gradient(0deg, rgba(76,0,0,1) 0%, rgba(121,9,9,1) 48%, rgba(160,7,7,1) 100%);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Nunito Sans', sans-serif;
+}
+
+button {
+    width: 90vw;
+    max-width: 500px;
+
+    padding: 10px;
+    margin: 25px auto;
+    display: block;
+
+    font-size: 1.25em;
+    font-weight: 700;
+
+    border: none;
+    border-radius: 2px;
+    outline: 2px solid white;
+
+    background-color: transparent;
+    color: white;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.highlight {
+    font-weight: 900;
+    color: rgb(139, 6, 6);
+    box-shadow: inset 0 -3.25em 0 0 white;
+}
+
+.header-image {
+    background-image: url(images/background.jpg);
+    width: 100vw;
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    max-width: 500px;
+    max-height: calc(20vh - 7.5vh);
+    padding-top: calc(3.75vh);
+    margin: auto;
+    display: block;
+}
+
+/* .glow {
+    border: none;
+    outline: none;
+    color: rgb(160,7,7);
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.glow:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 10s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+} */
+
+
+/* For desktop screens */
+@media screen and (min-width: 1024px) {
+    button:hover,
+    button:focus {
+        color: rgb(139, 6, 6);
+        box-shadow: inset 0 -3.25em 0 0 white;
+        mix-blend-mode: screen;
+    }
+}
